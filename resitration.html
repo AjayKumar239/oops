@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .gender-options {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .gender-options label {
+      font-weight: normal;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>Registration Form</h2>
+  <form id="registrationForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="class">Class</label>
+    <input type="text" id="class" name="class" required>
+
+    <label>Gender</label>
+    <div class="gender-options">
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
+      <label><input type="radio" name="gender" value="other"> Other</label>
+    </div>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="language">Language</label>
+    <select id="language" name="language" required>
+      <option value="">-- Select Language --</option>
+      <option value="english">English</option>
+      <option value="hindi">Hindi</option>
+      <option value="bengali">Bengali</option>
+      <option value="telugu">Telugu</option>
+    </select>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm-password">Confirm Password</label>
+    <input type="password" id="confirm-password" name="confirm-password" required>
+
+    <button type="submit">Register</button>
+  </form>
+</div>
+
+<script>
+  document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent actual form submission
+    alert("Successfully Submitted!");
+    // Optionally reset form:
+    // this.reset();
+  });
+</script>
+
+</body>
+</html>
