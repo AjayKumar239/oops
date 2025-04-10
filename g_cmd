@@ -18,7 +18,7 @@ git remote add origin https://github.com/username/repo.git
 git status
 
 # 5. Stage Files
-git add .
+git add .  
 
 # 6. Commit Changes
 git commit -m "your commit message"
@@ -76,5 +76,7 @@ git config --list
 # -----------------------------
 # 🐙 GitHub Token Login Reminder
 # -----------------------------
+# Use your GitHub username as the login
+# Use the personal access token (PAT) as the password
 # Use your GitHub username as the login
 # Use the personal access token (PAT) as the password
